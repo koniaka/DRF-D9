@@ -26,7 +26,7 @@ SECRET_KEY = 'yhpdlsagr&m9icf1(xaok3n7wqz%-)+t$jut@cfy=m%y=e+dlh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'https://peaceful-oasis-52121.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'peaceful-oasis-52121.herokuapp.com']
 
 
 # Application definition
