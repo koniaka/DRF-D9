@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'yhpdlsagr&m9icf1(xaok3n7wqz%-)+t$jut@cfy=m%y=e+dlh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/', 'https://peaceful-oasis-52121.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://peaceful-oasis-52121.herokuapp.com/']
 
 
 # Application definition
