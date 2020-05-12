@@ -26,7 +26,7 @@ SECRET_KEY = 'yhpdlsagr&m9icf1(xaok3n7wqz%-)+t$jut@cfy=m%y=e+dlh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'peaceful-oasis-52121.herokuapp.com']
+ALLOWED_HOSTS = ['*', 'peaceful-oasis-52121.herokuapp.com']
 
 
 # Application definition
@@ -75,8 +75,14 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+# DATABASES = {
+#     'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+# }
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 

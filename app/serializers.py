@@ -23,15 +23,19 @@ class ArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Article
-        fields = ['title', 'content', 'author_id', 'author_name']
+        fields = [
+            'title',
+            'content',
+            'author_id',
+            'author_name',
+            'status',
+            'publication_date',
+            'category'
+        ]
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ['category']
 
-class AuthorDetailSerializer(serializers.ModelSerializer):
-    articles = ArticleSerializer(many=True, read_only=True)
-    class Meta:
-        model = Author
-        fields = ['name', 'id', 'articles']
+
